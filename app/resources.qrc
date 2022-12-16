@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/">
+        <file>migrations/20221220-180000-create-users-table.sql</file>
+        <file>migrations/20221226-210000-added-fields-for-oauth.sql</file>
+    </qresource>
+</RCC>

@@ -1,0 +1,13 @@
+[Desktop Entry]
+Type=Application
+X-Nemo-Application-Type=silica-qt5
+Icon=ru.auroraos.AuroraOsWebDavGuiClient
+Exec=/usr/bin/ru.auroraos.AuroraOsWebDavGuiClient
+Name=WebDav Client
+Name[ru]=Клиент WebDav
+
+[X-Application]
+Permissions=Internet;UserDirs;WebView
+OrganizationName=ru.auroraos
+ApplicationName=AuroraOsWebDavGuiClient
+ExecDBus=/usr/bin/ru.auroraos.AuroraOsWebDavGuiClient
