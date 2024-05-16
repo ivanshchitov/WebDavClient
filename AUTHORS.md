@@ -20,3 +20,5 @@
   * Reviewer, 2023
 * Evgeniy Samohin, <e.samohin@omp.ru>
   * Reviewer, 2023
+* Oksana Torosyan, <o.torosyan@omp.ru>
+  * Designer, 2024
