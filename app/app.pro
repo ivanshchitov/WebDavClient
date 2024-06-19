@@ -44,6 +44,7 @@ HEADERS += \
 
 DISTFILES += \
     rpm/ru.auroraos.AuroraOsWebDavGuiClient.spec \
+    ru.auroraos.AuroraOsWebDavGuiClient.desktop \
     LICENSE.BSD-3-CLAUSE.md \
     README.md \
 
