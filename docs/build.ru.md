@@ -47,6 +47,12 @@ CLIENT_ID=<ваш_токен> CLIENT_SECRET=<ваш_токен> apptool build
 docker run -it -u `id -u`:`id -g` --rm --env CLIENT_ID=<ваш_токен> --env CLIENT_SECRET=<ваш_токен> -v "$PWD":/sources -w /sources registry.omprussia.ru/omp-sdk/sdk-build-tools:dp2
 ```
 
+Для сборки приложения с помощью Platform SDK передайте в качестве переменных окружения   
+идентификатор клиента и секретный ключ клиента:  
+Run Platform SDK: $PSDK_DIR/sdk-chroot  
+export CLIENT_ID=c24eecb6677c4ed1a38aacc835878d0c  
+export CLIENT_SECRET=df7fb0c709664470bd3f8995e34ee2cd  
+mb2 -t Aurora_OS-Target build  
 
 ## Установка приложения на устройство
 
