@@ -48,11 +48,19 @@ docker run -it -u `id -u`:`id -g` --rm --env CLIENT_ID=<ваш_токен> --env
 ```
 
 Для сборки приложения с помощью Platform SDK передайте в качестве переменных окружения   
-идентификатор клиента и секретный ключ клиента:  
+идентификатор клиента и секретный ключ клиента, например:     
 Run Platform SDK: $PSDK_DIR/sdk-chroot  
 export CLIENT_ID=c24eecb6677c4ed1a38aacc835878d0c  
 export CLIENT_SECRET=df7fb0c709664470bd3f8995e34ee2cd  
-mb2 -t Aurora_OS-Target build  
+mb2 -t Aurora_OS-Target build
+
+Для сборки приложения с помощью sfdk передайте идентификатор клиента     
+и секретный ключ клиента в аргументах qmake, например:               
+mkdir WebDavClient_build_aarch64 && cd WebDavClient_build_aarch64     
+sfdk config target=AuroraOS-Target-aarch64 , where Aurora_OS-Target-aarch64 is target name     
+sfdk qmake ../WebDavClient/ CLIENT_ID=c24eecb6677c4 CLIENT_SECRET=df7fb0c709664470bd3      
+sfdk make-install      
+sfdk package      
 
 ## Установка приложения на устройство
 

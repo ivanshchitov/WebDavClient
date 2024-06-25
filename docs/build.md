@@ -46,11 +46,18 @@ CLIENT_ID=<your_token> CLIENT_SECRET=<your_token> apptool build
 docker run -it -u `id -u`:`id -g` --rm --env CLIENT_ID=<your_token> --env CLIENT_SECRET=<your_token> -v "$PWD":/sources -w /sources registry.omprussia.ru/omp-sdk/sdk-build-tools:dp2
 ```
 
-To build the application with the Platform SDK pass client id and client secret as a environment variables:  
+To build the application with the Platform SDK pass client id and client secret as a environment variables, for example:      
 Run Platform SDK: $PSDK_DIR/sdk-chroot  
 export CLIENT_ID=c24eecb6677c4ed1a38aacc835878d0c  
 export CLIENT_SECRET=df7fb0c709664470bd3f8995e34ee2cd  
-mb2 -t Aurora_OS-Target build  
+mb2 -t Aurora_OS-Target build , where Aurora_OS-Target is target name    
+
+To build the application with the sfdk pass client id and client secret as a qmake parameters, for example:        
+mkdir WebDavClient_build_aarch64 && cd WebDavClient_build_aarch64   
+sfdk config target=AuroraOS-Target-aarch64 , where Aurora_OS-Target-aarch64 is target name   
+sfdk qmake ../WebDavClient/ CLIENT_ID=c24eecb6677c4 CLIENT_SECRET=df7fb0c709664470bd3   
+sfdk make-install   
+sfdk package   
 
 ## Deploying on the device
 
