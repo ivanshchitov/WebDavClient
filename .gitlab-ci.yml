@@ -2,8 +2,8 @@ stages:
   - build
 default:
   before_script:
-    - export CLIENT_ID=c24eecb6677c4ed1a38aacc835878d0c
-    - export CLIENT_SECRET=df7fb0c709664470bd3f8995e34ee2cd
+    - export CLIENT_ID="c24eecb6677c4ed1a38aacc835878d0c"
+    - export CLIENT_SECRET="df7fb0c709664470bd3f8995e34ee2cd"
 
 build-aurora_5_1_0_100_aarch64:
   stage: build
