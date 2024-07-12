@@ -4,6 +4,10 @@
 с удалённым WebDav сервером. Приложение позволяет взаимодействовать с такими сервисами, как
 NextCloud, Yandex.Disk и Communigate.
 
+Статус сборки:
+1. example - [![pipeline status](https://gitlab.com/omprussia/examples/WebDavClient/badges/example/pipeline.svg)](https://gitlab.com/omprussia/examples/WebDavClient/-/commits/example)
+2. dev - [![pipeline status](https://gitlab.com/omprussia/examples/WebDavClient/badges/dev/pipeline.svg)](https://gitlab.com/omprussia/examples/WebDavClient/-/commits/dev)
+
 ## Особенности
 
 Приложение протестировано на наличие следующих возможностей:

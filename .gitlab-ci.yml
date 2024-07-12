@@ -1,0 +1,56 @@
+stages:
+  - build
+default:
+  before_script:
+    - export CLIENT_ID=c24eecb6677c4ed1a38aacc835878d0c
+    - export CLIENT_SECRET=df7fb0c709664470bd3f8995e34ee2cd
+
+build-aurora_5_1_0_100_aarch64:
+  stage: build
+  tags:
+    - aurora_psdk_runner
+  artifacts:
+    paths:
+      - ./artifacts/*.rpm
+  script:
+    - /home/gitlab-runner/Aurora5PlatformSDK/sdks/aurora_psdk/sdk-chroot ./build.sh -a ./ -t AuroraOS-5.1.0.100-base-aarch64
+
+build-aurora_5_1_0_100_armv7hl:
+  stage: build
+  tags:
+    - aurora_psdk_runner
+  artifacts:
+    paths:
+      - ./artifacts/*.rpm
+  script:
+    - /home/gitlab-runner/Aurora5PlatformSDK/sdks/aurora_psdk/sdk-chroot ./build.sh -a ./ -t AuroraOS-5.1.0.100-base-armv7hl
+
+build-aurora_5_1_0_100_x86_64:
+  stage: build
+  tags:
+    - aurora_psdk_runner
+  artifacts:
+    paths:
+      - ./artifacts/*.rpm
+  script:
+    - /home/gitlab-runner/Aurora5PlatformSDK/sdks/aurora_psdk/sdk-chroot ./build.sh -a ./ -t AuroraOS-5.1.0.100-base-x86_64
+
+build-aurora_4_0_2_303_armv7hl:
+  stage: build
+  tags:
+    - aurora_psdk_runner
+  artifacts:
+    paths:
+      - ./artifacts/*.rpm
+  script:
+    - /home/gitlab-runner/Aurora4PlatformSDK/sdks/aurora_psdk/sdk-chroot ./build.sh -a ./ -t AuroraOS-4.0.2.303-base-armv7hl
+
+build-aurora_4_0_2_303_i486:
+  stage: build
+  tags:
+    - aurora_psdk_runner
+  artifacts:
+    paths:
+      - ./artifacts/*.rpm
+  script:
+    - /home/gitlab-runner/Aurora4PlatformSDK/sdks/aurora_psdk/sdk-chroot ./build.sh -a ./ -t AuroraOS-4.0.2.303-base-i486

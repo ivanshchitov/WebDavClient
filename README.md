@@ -4,6 +4,10 @@ The application with the graphical user interface that allows to interact with r
 WebDAV server. The application allows to interact with the NextCloud, Yandex.Disk
 and Communigate server.
 
+Build status:
+1. example - [![pipeline status](https://gitlab.com/omprussia/examples/WebDavClient/badges/example/pipeline.svg)](https://gitlab.com/omprussia/examples/WebDavClient/-/commits/example)
+2. dev - [![pipeline status](https://gitlab.com/omprussia/examples/WebDavClient/badges/dev/pipeline.svg)](https://gitlab.com/omprussia/examples/WebDavClient/-/commits/dev)
+
 ## Features
 
 The application has been tested for the following features:
