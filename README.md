@@ -2,7 +2,10 @@
 
 The application with the graphical user interface that allows to interact with remote
 WebDAV server. The application allows to interact with the NextCloud, Yandex.Disk
-and Communigate server.
+and Communigate server.  
+CLIENT_ID and CLIENT_SECRET must be specified to build and run the application. These values are required for authentication via
+OAuth protocol of Yandex API authorization tokens. Each token gives the application access to
+user data. You can get CLIENT_ID and CLIENT_SECRET here [oauth.yandex.ru](https://oauth.yandex.ru/).
 
 ## Features
 
