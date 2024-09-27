@@ -21,7 +21,7 @@ a set of projects.
 
 The application depends on a series of external git repositories.
 
-* [qwebdavlib](https://github.com/catchorg/Catch2) — the QWebDAV library.
+* [qwebdavlib](https://github.com/mhaller/qwebdavlib/) — the QWebDAV library.
 * [Catch2](https://github.com/catchorg/Catch2) — the unit test libraries.
 
 Before building the application both libraries should be loaded:

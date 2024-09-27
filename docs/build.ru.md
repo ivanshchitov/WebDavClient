@@ -19,7 +19,7 @@
 
 Приложение зависит от нескольких внешних git-репозиториев
 
-* [qwebdavlib](https://github.com/catchorg/Catch2) — библиотека QWebDAV.
+* [qwebdavlib](https://github.com/mhaller/qwebdavlib/) — библиотека QWebDAV.
 * [Catch2](https://github.com/catchorg/Catch2) — библиотека unit-тестов.
 
 Перед сборкой приложения должны быть загружены обе библиотеки:
