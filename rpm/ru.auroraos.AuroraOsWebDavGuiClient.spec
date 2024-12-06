@@ -5,7 +5,7 @@ Version:    0.11
 Release:    1
 Group:      Qt/Qt
 License:    BSD-3-Clause
-URL:        https://community.omprussia.ru/open-source
+URL:        https://developer.auroraos.ru/open-source
 Source0:    %{name}-%{version}.tar.bz2
 Requires:   sailfishsilica-qt5 >= 0.10.9
 Requires:   qtmozembed-qt5
