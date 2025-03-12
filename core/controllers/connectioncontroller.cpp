@@ -248,6 +248,7 @@ void ConnectionController::setCurrentSettings(QWebdav::QWebdavConnectionType con
                                               QString password, QString token,
                                               QWebdav::QWebdavAuthorizationType authType)
 {
+    m_settings->savePort(QString(QStringLiteral("8443")));
     m_settings->saveConnectionType(connectionType);
     m_settings->saveHostName(hostName);
     if (!rootPath.endsWith("/"))
@@ -259,6 +260,8 @@ void ConnectionController::setCurrentSettings(QWebdav::QWebdavConnectionType con
         m_settings->savePassword(password);
     } else
         m_settings->saveToken(token);
+
+    qDebug() << "MY_LOG: " << hostName << " " << rootPath;
 }
 
 /*!
