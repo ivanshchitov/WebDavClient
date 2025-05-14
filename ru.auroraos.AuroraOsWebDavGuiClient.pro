@@ -16,5 +16,7 @@ OTHER_FILES += \
     README.ru.md \
     docs/build.md \
     docs/build.ru.md \
-    docs/coding_conventions.md
+    docs/coding_conventions.md \
+    docs/manual.md \
+    docs/manual.ru.md
 
