@@ -49,6 +49,9 @@ Please consider the following guidelines while developing the application.
 
 * [Source code conventions](docs/coding_conventions.md)
 
+## Use cases
+
+The application use cases can be found in the [application usage manual](docs/manual.md).
 
 ## Terms of Use and Participation
 
