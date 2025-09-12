@@ -1,0 +1,80 @@
+  
+"build-aurora_PSDK_4_VER_armv7hl":
+  stage: build
+  tags:
+    - aurora_psdk_runner
+  artifacts:
+    paths:
+      - ./artifacts/*.rpm
+  script:
+    - /home/gitlab-runner/Aurora4PlatformSDK/sdks/aurora_psdk/sdk-chroot ./gitlab-ci/build.sh -a ./ -t AuroraOS-$PSDK_4_VER-base-armv7hl
+  when: always
+  
+  
+"build-aurora_PSDK_4_VER_i486":
+  stage: build
+  tags:
+    - aurora_psdk_runner
+  artifacts:
+    paths:
+      - ./artifacts/*.rpm
+  script:
+    - /home/gitlab-runner/Aurora4PlatformSDK/sdks/aurora_psdk/sdk-chroot ./gitlab-ci/build.sh -a ./ -t AuroraOS-$PSDK_4_VER-base-i486 
+  when: always
+  
+  
+"sign-aurora_PSDK_4_VER_armv7hl":
+  stage: sign
+  needs: ["build-aurora_PSDK_4_VER_armv7hl"]
+  dependencies:
+    - "build-aurora_PSDK_4_VER_armv7hl"
+  tags:
+    - aurora_psdk_runner
+  artifacts:
+    paths:
+      - ./artifacts/*.rpm
+  script:
+    - /home/gitlab-runner/Aurora4PlatformSDK/sdks/aurora_psdk/sdk-chroot ./gitlab-ci/sign.sh -r ./artifacts
+  
+  
+"sign-aurora_PSDK_4_VER_i486":
+  stage: sign
+  needs: ["build-aurora_PSDK_4_VER_i486"]
+  dependencies:
+    - "build-aurora_PSDK_4_VER_i486"
+  tags:
+    - aurora_psdk_runner
+  artifacts:
+    paths:
+      - ./artifacts/*.rpm
+  script:
+    - /home/gitlab-runner/Aurora4PlatformSDK/sdks/aurora_psdk/sdk-chroot ./gitlab-ci/sign.sh -r ./artifacts
+  
+  
+"validation-aurora_PSDK_4_VER_armv7hl":
+  stage: validation
+  needs: ["sign-aurora_PSDK_4_VER_armv7hl"]
+  dependencies:
+    - "sign-aurora_PSDK_4_VER_armv7hl"
+  tags:
+    - aurora_psdk_runner
+  artifacts:
+    paths:
+      - ./artifacts/*.rpm
+  script:
+    - /home/gitlab-runner/aurora-utils/rpm_validator_4 /home/gitlab-runner/Aurora4PlatformSDK/ ./artifacts/*.armv7hl.rpm
+  
+  
+"validation-aurora_PSDK_4_VER_i486":
+  stage: validation
+  needs: ["sign-aurora_PSDK_4_VER_i486"]
+  dependencies:
+    - "sign-aurora_PSDK_4_VER_i486"
+  tags:
+    - aurora_psdk_runner
+  artifacts:
+    paths:
+      - ./artifacts/*.rpm
+  script:
+    - /home/gitlab-runner/aurora-utils/rpm_validator_4 /home/gitlab-runner/Aurora4PlatformSDK/ ./artifacts/*.x86_64.rpm
+    

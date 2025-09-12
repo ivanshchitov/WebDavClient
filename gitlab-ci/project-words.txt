@@ -1,0 +1,7 @@
+auroraos
+subprojects
+subproject
+rpmbuild
+сmake
+qmake
+
