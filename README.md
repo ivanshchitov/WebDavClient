@@ -32,15 +32,15 @@ The project uses the [qwebdavlib](qwebdavlib/) library that implements WebDav AP
 
 QWebDav methods that is used:
 
-* [QWebDav::setConnectionSettings()](https://gitlab.com/omprussia/examples/WebDavClient/-/blob/example/qwebdavlib/qwebdav.h#L99) is used inside the [Operation classes](core/operations) to set up parameters to connect to the remote server.
-* [QWebDav::setToken()](https://gitlab.com/omprussia/examples/WebDavClient/-/blob/example/qwebdavlib/qwebdav.h#L93) is used inside most of [Operation classes](core/operations) to perform an operation with the remote server.
-* [QWebDav::mkdir()](https://gitlab.com/omprussia/examples/WebDavClient/-/blob/example/qwebdavlib/qwebdav.h#L126) is used inside the [CreateFolderOperation](core/operations/createfolderoperation.cpp) class to create a new folder on the remote server.
-* [QWebDav::remove()](https://gitlab.com/omprussia/examples/WebDavClient/-/blob/example/qwebdavlib/qwebdav.h#L129) is used inside the [DeleteFileOrDirectoryOperation](core/operations/deletefileordirectoryoperation.cpp) class to remove file or folder from the remote server.
-* [QWebDav::get()](https://gitlab.com/omprussia/examples/WebDavClient/-/blob/example/qwebdavlib/qwebdav.h#L119) is used inside the [DownloadFileOperation](core/operations/downloadfileoperation.cpp) class to retrieve a file from the remote server. Also, this method is used inside the [DownloadFolderOperation](core/operations/downloadfolderoperation.cpp) to retrieve folders. Also, this method is used inside the [GetUserInfoOperation](core/operations/getuserinfooperation.cpp) class to retrieve an info about the current authorized user.
-* [QWebDav::move()](https://gitlab.com/omprussia/examples/WebDavClient/-/blob/example/qwebdavlib/qwebdav.h#L128) is used inside the [MoveFileOrDirectoryOperation](core/operations/movefileordirectoryoperation.cpp) class to move files and folders on the remote server. Also, this method is used inside the [RenameFileOrDirectoryOperation](core/operations/renamefileordirectoryoperation.cpp) class to rename files and folders.
-* [QWebDav::put()](https://gitlab.com/omprussia/examples/WebDavClient/-/blob/example/qwebdavlib/qwebdav.h#L123) is used inside the [UploadFileOperation](core/operations/uploadfileoperation.cpp) and [UploadFolderOperation](core/operations/uploadfolderoperation.cpp) classes to upload files and folders into the remote server.
-* [QWebdavDirParser::listDirectory()](https://gitlab.com/omprussia/examples/WebDavClient/-/blob/example/qwebdavlib/qwebdavdirparser.h#L76) is used inside the [DownloadFolderOperation](core/operations/downloadfolderoperation.cpp) to retrieve list of nested folders to download recursively.
-* [QWebdavDirParser::getFileInfo()](https://gitlab.com/omprussia/examples/WebDavClient/-/blob/example/qwebdavlib/qwebdavdirparser.h#L80) is used inside the [FileInfoOperation](core/operations/fileinfooperation.cpp) class to retrieve the file information.
+* [QWebDav::setConnectionSettings()](https://hub.mos.ru/auroraos/examples/WebDavClient/-/tree/example/qwebdavlib/qwebdav.h#L99) is used inside the [Operation classes](core/operations) to set up parameters to connect to the remote server.
+* [QWebDav::setToken()](https://hub.mos.ru/auroraos/examples/WebDavClient/-/tree/example/qwebdavlib/qwebdav.h#L93) is used inside most of [Operation classes](core/operations) to perform an operation with the remote server.
+* [QWebDav::mkdir()](https://hub.mos.ru/auroraos/examples/WebDavClient/-/tree/example/qwebdavlib/qwebdav.h#L126) is used inside the [CreateFolderOperation](core/operations/createfolderoperation.cpp) class to create a new folder on the remote server.
+* [QWebDav::remove()](https://hub.mos.ru/auroraos/examples/WebDavClient/-/tree/example/qwebdavlib/qwebdav.h#L129) is used inside the [DeleteFileOrDirectoryOperation](core/operations/deletefileordirectoryoperation.cpp) class to remove file or folder from the remote server.
+* [QWebDav::get()](https://hub.mos.ru/auroraos/examples/WebDavClient/-/tree/example/qwebdavlib/qwebdav.h#L119) is used inside the [DownloadFileOperation](core/operations/downloadfileoperation.cpp) class to retrieve a file from the remote server. Also, this method is used inside the [DownloadFolderOperation](core/operations/downloadfolderoperation.cpp) to retrieve folders. Also, this method is used inside the [GetUserInfoOperation](core/operations/getuserinfooperation.cpp) class to retrieve an info about the current authorized user.
+* [QWebDav::move()](https://hub.mos.ru/auroraos/examples/WebDavClient/-/tree/example/qwebdavlib/qwebdav.h#L128) is used inside the [MoveFileOrDirectoryOperation](core/operations/movefileordirectoryoperation.cpp) class to move files and folders on the remote server. Also, this method is used inside the [RenameFileOrDirectoryOperation](core/operations/renamefileordirectoryoperation.cpp) class to rename files and folders.
+* [QWebDav::put()](https://hub.mos.ru/auroraos/examples/WebDavClient/-/tree/example/qwebdavlib/qwebdav.h#L123) is used inside the [UploadFileOperation](core/operations/uploadfileoperation.cpp) and [UploadFolderOperation](core/operations/uploadfolderoperation.cpp) classes to upload files and folders into the remote server.
+* [QWebdavDirParser::listDirectory()](https://hub.mos.ru/auroraos/examples/WebDavClient/-/tree/example/qwebdavlib/qwebdavdirparser.h#L76) is used inside the [DownloadFolderOperation](core/operations/downloadfolderoperation.cpp) to retrieve list of nested folders to download recursively.
+* [QWebdavDirParser::getFileInfo()](https://hub.mos.ru/auroraos/examples/WebDavClient/-/tree/example/qwebdavlib/qwebdavdirparser.h#L80) is used inside the [FileInfoOperation](core/operations/fileinfooperation.cpp) class to retrieve the file information.
 
 
 ## Application development guidelines
@@ -107,7 +107,7 @@ of an application based on C++ and QML for Aurora OS.
 * **[libs](libs)** subproject contains the application external libs:
   * **[libs.pro](libs/libs.pro)** file 
   describes the external libs for the qmake build system.
-* **[qwebdavlib](qwebdavlib/)** subproject contains QWebDav library source code.
+* **[qwebdavlib](qwebdavlib/)** subproject contains [QWebDav](https://gitverse.ru/auroraos/mirror_qwebdavlib) library source code.
 * **[rpm](rpm)** directory contains the rpm-package build settings.
   * **[ru.auroraos.AuroraOsWebDavGuiClient.spec](rpm/ru.auroraos.AuroraOsWebDavGuiClient.spec)** file is used by rpmbuild tool.
 

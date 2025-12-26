@@ -32,18 +32,18 @@ NextCloud, Yandex.Disk и Communigate.
 для взаимодействия с удалённым сервером.
 
 Используемые методы QWebDav:
-* [QWebDav::setConnectionSettings()](https://gitlab.com/omprussia/examples/WebDavClient/-/blob/example/qwebdavlib/qwebdav.h#L99) используется внутри [классов операций](core/operations) для установки параметров подключения к удалённому серверу.
-* [QWebDav::setToken()](https://gitlab.com/omprussia/examples/WebDavClient/-/blob/example/qwebdavlib/qwebdav.h#L93) используется внутри большинства [классов операций](core/operations) для выполнения операций с удалённым сервером.
-* [QWebDav::mkdir()](https://gitlab.com/omprussia/examples/WebDavClient/-/blob/example/qwebdavlib/qwebdav.h#L126) используется внутри класса [CreateFolderOperation](core/operations/createfolderoperation.cpp) для создания новой директории на удалённом сервере.
-* [QWebDav::remove()](https://gitlab.com/omprussia/examples/WebDavClient/-/blob/example/qwebdavlib/qwebdav.h#L129) используется внутри класса [DeleteFileOrDirectoryOperation](core/operations/deletefileordirectoryoperation.cpp) для удаления файлов или директорий на удалённом сервере.
-* [QWebDav::get()](https://gitlab.com/omprussia/examples/WebDavClient/-/blob/example/qwebdavlib/qwebdav.h#L119) используется внутри класса [DownloadFileOperation](core/operations/downloadfileoperation.cpp)  для получения файла с удалённого сервера. 
+* [QWebDav::setConnectionSettings()](https://hub.mos.ru/auroraos/examples/WebDavClient/-/tree/example/qwebdavlib/qwebdav.h#L99) используется внутри [классов операций](core/operations) для установки параметров подключения к удалённому серверу.
+* [QWebDav::setToken()](https://hub.mos.ru/auroraos/examples/WebDavClient/-/tree/example/qwebdavlib/qwebdav.h#L93) используется внутри большинства [классов операций](core/operations) для выполнения операций с удалённым сервером.
+* [QWebDav::mkdir()](https://hub.mos.ru/auroraos/examples/WebDavClient/-/tree/example/qwebdavlib/qwebdav.h#L126) используется внутри класса [CreateFolderOperation](core/operations/createfolderoperation.cpp) для создания новой директории на удалённом сервере.
+* [QWebDav::remove()](https://hub.mos.ru/auroraos/examples/WebDavClient/-/tree/example/qwebdavlib/qwebdav.h#L129) используется внутри класса [DeleteFileOrDirectoryOperation](core/operations/deletefileordirectoryoperation.cpp) для удаления файлов или директорий на удалённом сервере.
+* [QWebDav::get()](https://hub.mos.ru/auroraos/examples/WebDavClient/-/tree/example/qwebdavlib/qwebdav.h#L119) используется внутри класса [DownloadFileOperation](core/operations/downloadfileoperation.cpp)  для получения файла с удалённого сервера. 
 Также этот метод используется внутри класса [DownloadFolderOperation](core/operations/downloadfolderoperation.cpp) для получения директорий.
 Также этот метод используется внутри класса [GetUserInfoOperation](core/operations/getuserinfooperation.cpp) для получения информации о текущем авторизованном пользователе.
-* [QWebDav::move()](https://gitlab.com/omprussia/examples/WebDavClient/-/blob/example/qwebdavlib/qwebdav.h#L128) используется внутри класса [MoveFileOrDirectoryOperation](core/operations/movefileordirectoryoperation.cpp) для перемещения файлов и директорий на удалённом сервере. 
+* [QWebDav::move()](https://hub.mos.ru/auroraos/examples/WebDavClient/-/tree/example/qwebdavlib/qwebdav.h#L128) используется внутри класса [MoveFileOrDirectoryOperation](core/operations/movefileordirectoryoperation.cpp) для перемещения файлов и директорий на удалённом сервере. 
 Также этот метод используется внутри класса [RenameFileOrDirectoryOperation](core/operations/renamefileordirectoryoperation.cpp) для переименования файлов и директорий.
-* [QWebDav::put()](https://gitlab.com/omprussia/examples/WebDavClient/-/blob/example/qwebdavlib/qwebdav.h#L123) используется внутри классов [UploadFileOperation](core/operations/uploadfileoperation.cpp) и [UploadFolderOperation](core/operations/uploadfolderoperation.cpp) для загрузки файлов и директорий на удалённый сервер.
-* [QWebdavDirParser::listDirectory()](https://gitlab.com/omprussia/examples/WebDavClient/-/blob/example/qwebdavlib/qwebdavdirparser.h#L76) используется внутри класса [DownloadFolderOperation](core/operations/downloadfolderoperation.cpp) для получения списка вложенных директорий для рекурсивной загрузки.
-* [QWebdavDirParser::getFileInfo()](https://gitlab.com/omprussia/examples/WebDavClient/-/blob/example/qwebdavlib/qwebdavdirparser.h#L80) используется внутри класса [FileInfoOperation](core/operations/fileinfooperation.cpp) для получения информации о файле.
+* [QWebDav::put()](https://hub.mos.ru/auroraos/examples/WebDavClient/-/tree/example/qwebdavlib/qwebdav.h#L123) используется внутри классов [UploadFileOperation](core/operations/uploadfileoperation.cpp) и [UploadFolderOperation](core/operations/uploadfolderoperation.cpp) для загрузки файлов и директорий на удалённый сервер.
+* [QWebdavDirParser::listDirectory()](https://hub.mos.ru/auroraos/examples/WebDavClient/-/tree/example/qwebdavlib/qwebdavdirparser.h#L76) используется внутри класса [DownloadFolderOperation](core/operations/downloadfolderoperation.cpp) для получения списка вложенных директорий для рекурсивной загрузки.
+* [QWebdavDirParser::getFileInfo()](https://hub.mos.ru/auroraos/examples/WebDavClient/-/tree/example/qwebdavlib/qwebdavdirparser.h#L80) используется внутри класса [FileInfoOperation](core/operations/fileinfooperation.cpp) для получения информации о файле.
 
 
 ## Рекомендации по разработке
@@ -103,7 +103,7 @@ NextCloud, Yandex.Disk и Communigate.
   * Файл **[coding_conventions.md](docs/coding_conventions.md)** описывает соглашение по разработке.
 * Подпроект **[libs](libs)** содержит внешние библиотеки приложения:
   * Файл **[libs.pro](libs/libs.pro)** описывает структуру подпроекта для системы сборки qmake.
-* Подпроект **[qwebdavlib](qwebdavlib/)** содержит исходный код библиотеки QWebDav.
+* Подпроект **[qwebdavlib](qwebdavlib/)** содержит исходный код библиотеки [QWebDav](https://gitverse.ru/auroraos/mirror_qwebdavlib).
 * Каталог **[rpm](rpm)** содержит настройки сборки rpm-пакета.
   * Файл **[ru.auroraos.AuroraOsWebDavGuiClient.spec](rpm/ru.auroraos.AuroraOsWebDavGuiClient.spec)** используется инструментом rpmbuild.
 
