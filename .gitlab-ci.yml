@@ -4,26 +4,8 @@ stages:
   - build
   - sign
   - validation
-
-spell-checking:
-  stage: readme_cspell_and_cppcheck
-  tags:
-    - aurora_psdk_runner
-  script:
-    - sudo cp ./gitlab-ci/project-words.txt /home/gitlab-runner/cspell 
-    - /home/gitlab-runner/.nvm/versions/node/v22.14.0/bin/npx cspell --config /home/gitlab-runner/cspell/cspell.json "./README.md" "./README.ru.md" --show-suggestions
-
-cppcheck:
-  stage: readme_cspell_and_cppcheck
-  tags:
-    - aurora_psdk_runner
-  artifacts:
-    paths:
-      - ./report.txt
-    when: always
-  script:
-    - /opt/cppcheck/cppcheck -q --enable=all --error-exitcode=1 --suppress=missingIncludeSystem --suppress=unknownMacro --template='{id} {file}:{line} {message}' $CI_PROJECT_DIR 2> $CI_PROJECT_DIR/report.txt
+  - archiving
     
 include:
-  - local: 'gitlab-ci/**.yml'
-
+  - project: 'auroraos/examples/ci-configuration'
+    file: '/group-jobs.yml'

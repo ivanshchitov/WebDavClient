@@ -4,4 +4,6 @@ subproject
 rpmbuild
 сmake
 qmake
-
+qwebdavlib
+Webdav
+Communigate
