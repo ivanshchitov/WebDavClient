@@ -1,11 +1,3 @@
-stages:
-  - readme_cspell_and_cppcheck
-  - cppcheck
-  - build
-  - sign
-  - validation
-  - archiving
-    
 include:
   - project: 'auroraos/examples/ci-configuration'
     file: '/group-jobs.yml'
