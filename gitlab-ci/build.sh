@@ -48,6 +48,14 @@ mkdir -p build
 mkdir -p artifacts
 cd build
 
+# CLIENT_ID и CLIENT_SECRET нужны только для OAuth-авторизации Yandex.Disk
+# и не влияют на успешность самой сборки. Если реальные значения не переданы
+# через переменные CI/CD, подставляем заглушки, чтобы qmake не падал с
+# ошибкой "CLIENT_ID is not set". Если переменные уже заданы (например,
+# через masked/protected переменные проекта), используются они.
+export CLIENT_ID="${CLIENT_ID:-fake_client_id}"
+export CLIENT_SECRET="${CLIENT_SECRET:-fake_client_secret}"
+
 sdk-assistant list
 
 # Build project
