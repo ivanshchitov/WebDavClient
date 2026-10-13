@@ -25,6 +25,7 @@ void CreateFolderOperation::run()
 {
     QNetworkReply *reply = m_webdav.mkdir(m_path);
     connect(reply, &QNetworkReply::finished, [=]() {
+        // Keep the operation result consistent with the network reply.
         if (reply->error() == QNetworkReply::NetworkError::NoError)
             emit operationFinished(true);
         else
