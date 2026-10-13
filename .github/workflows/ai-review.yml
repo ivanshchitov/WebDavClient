@@ -1,0 +1,19 @@
+# Trusted ff.ai workflow pinned to a verified commit.
+name: AI review with ff.ai
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ffai-review-${{ github.event.pull_request.number }}
+  cancel-in-progress: true
+
+jobs:
+  review:
+    uses: ivanshchitov/ff.ai/.github/workflows/pr-review.yml@6348128a055e9f657c411da7d9449160fbafca10
+    secrets:
+      OPENCODE_API_KEY: ${{ secrets.OPENCODE_API_KEY }}
